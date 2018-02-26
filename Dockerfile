@@ -17,7 +17,8 @@ RUN apt-get install -y --no-install-recommends \
         libsm6 \
         libxrender1 \
         git mercurial subversion \
-        hugo
+        hugo \
+	libkrb5-dev
 
 #Install Anaconda
 RUN echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh && \
