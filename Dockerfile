@@ -27,7 +27,7 @@ RUN echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh && \
     rm ~/anaconda.sh
 
 #Install Python packages (incl. Theano, Keras and PyTorch)
-RUN /opt/conda/bin/conda install -y ipykernel matplotlib pydot-ng theano pygpu bcolz paramiko keras seaborn graphviz scikit-learn
+RUN /opt/conda/bin/conda install -y ipykernel matplotlib pydot-ng theano pygpu bcolz paramiko keras seaborn graphviz scikit-learn sparkmagic
 
 #RUN /opt/conda/bin/conda install -c calex sklearn-pandas
 
