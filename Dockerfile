@@ -1,7 +1,7 @@
 FROM sagemathinc/cocalc
 
 #Install useful utilities missing in original CoCalc image
-RUN sed -i -e 's/archive.ubuntu.com\|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list && apt-get update 
+RUN apt-get update 
 RUN apt-get install -y --no-install-recommends \
 	curl \
 	ca-certificates \
