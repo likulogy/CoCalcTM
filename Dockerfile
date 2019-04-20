@@ -21,7 +21,7 @@ RUN apt-get install -y --no-install-recommends \
 	libkrb5-dev
 
 #Install the fish shell for default usage.
-RUN apt-get install fish
+RUN apt-get install -y fish
 RUN chsh -s /usr/bin/fish
 
 #Install Anaconda
