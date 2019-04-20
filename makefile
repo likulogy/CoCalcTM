@@ -1,2 +1,2 @@
 build:
-	docker build -t cocalc_tm .
+	docker build -t condacalc .
