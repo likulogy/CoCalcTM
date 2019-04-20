@@ -27,17 +27,16 @@ RUN echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh && \
     rm ~/anaconda.sh
 
 #Install Python packages (incl. Theano, Keras and PyTorch)
-RUN /opt/conda/bin/conda install -y ipykernel matplotlib pydot-ng theano pygpu bcolz paramiko keras seaborn graphviz scikit-learn pandas tensorflow numpy scipy
+RUN /opt/conda/bin/conda install -y ipykernel matplotlib pydot-ng theano pygpu bcolz paramiko keras seaborn graphviz scikit-learn tensorflow numpy scipy
 RUN /opt/conda/bin/conda install -c mutirri simpy
+RUN /opt/conda/bin/conda install -c anaconda pandas
 
 ENV PATH /opt/conda/bin:${PATH}
 RUN echo 'export PATH=/opt/conda/bin${PATH:+:${PATH}}' >> ~/.bashrc
 
 #Add Conda kernel to Jupyter
-RUN python -m ipykernel install --prefix=/usr/local/ --name "anaconda_kernel"
+RUN python -m ipykernel install --prefix=/usr/local/ --name "Anaconda(Python3)"
 
 #Start CoCalc
-
 CMD /root/run.py
-
 EXPOSE 80 443
